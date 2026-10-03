@@ -1,0 +1,649 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #050816;
+    color: white;
+    line-height: 1.8;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(circle at 20% 30%, #27326b 0%, transparent 25%),
+        radial-gradient(circle at 80% 20%, #351d68 0%, transparent 25%),
+        linear-gradient(135deg, #050816, #090d29);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* ستاره‌های پس زمینه */
+
+header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 3px;
+    height: 3px;
+
+    background: white;
+
+    box-shadow:
+        100px 80px white,
+        250px 180px white,
+        400px 90px white,
+        550px 250px white,
+        720px 130px white,
+        850px 300px white,
+        950px 100px white,
+        1100px 200px white,
+        1250px 80px white,
+        1400px 250px white,
+        200px 400px white,
+        500px 500px white,
+        800px 450px white,
+        1000px 550px white,
+        1300px 430px white;
+
+    opacity: 0.7;
+}
+
+
+/* ================= NAVBAR ================= */
+
+nav {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 10;
+}
+
+nav h2 {
+    font-size: 28px;
+    color: #70d8ff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #70d8ff;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.hero div {
+    max-width: 650px;
+}
+
+.welcome {
+    color: #70d8ff;
+    font-size: 17px;
+
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 85px;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: transparent;
+
+    -webkit-text-stroke: 2px #70d8ff;
+}
+
+.hero div > p:not(.welcome) {
+    margin: 25px 0;
+
+    color: #b9bed6;
+
+    max-width: 520px;
+
+    font-size: 18px;
+}
+
+.btn {
+    display: inline-block;
+
+    background: linear-gradient(135deg, #218cff, #7437ff);
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 12px 28px;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 30px #397cff66;
+}
+
+
+/* ================= PLANETS ================= */
+
+.planets-section {
+    padding: 100px 5%;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-title p,
+.small-title {
+    color: #60d8ff;
+
+    letter-spacing: 5px;
+
+    font-size: 13px;
+}
+
+.section-title h2 {
+    font-size: 42px;
+}
+
+.planets {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ================= PLANET CARD ================= */
+
+.planet-card {
+    background: linear-gradient(
+        145deg,
+        #10152c,
+        #090d20
+    );
+
+    border: 1px solid #ffffff15;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: 0.4s;
+
+    overflow: hidden;
+}
+
+.planet-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #579cff;
+
+    box-shadow: 0 20px 50px #00000080;
+}
+
+.planet-card h3 {
+    font-size: 26px;
+
+    margin: 20px 0 10px;
+}
+
+.planet-card p {
+    color: #aeb4cd;
+
+    font-size: 14px;
+
+    min-height: 100px;
+}
+
+.planet-card span {
+    display: block;
+
+    color: #64d5ff;
+
+    font-size: 12px;
+
+    margin-top: 15px;
+}
+
+
+/* ================= PLANETS DESIGN ================= */
+
+.planet {
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    transition: 0.5s;
+
+    position: relative;
+}
+
+.planet-card:hover .planet {
+    transform: scale(1.1) rotate(15deg);
+}
+
+
+/* عطارد */
+
+.mercury {
+    background:
+        radial-gradient(circle at 30% 25%, #e4ded2, #847e78 55%, #373431);
+
+    box-shadow:
+        inset -18px -15px 25px #222,
+        0 0 30px #d9d0ba40;
+}
+
+
+/* زهره */
+
+.venus {
+    background:
+        radial-gradient(circle at 30% 25%, #ffe699, #cc8d35 55%, #713d13);
+
+    box-shadow:
+        inset -15px -20px 25px #5b3015,
+        0 0 35px #ffb83e45;
+}
+
+
+/* زمین */
+
+.earth {
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            #5ee7ff,
+            #1670cf 45%,
+            #063b78 80%
+        );
+
+    box-shadow:
+        inset -20px -20px 30px #001c48,
+        0 0 40px #32a7ff55;
+}
+
+.earth::before {
+    content: "";
+
+    position: absolute;
+
+    width: 40px;
+    height: 25px;
+
+    background: #4daf56;
+
+    border-radius: 50%;
+
+    top: 25px;
+    right: 20px;
+
+    transform: rotate(20deg);
+
+    box-shadow:
+        -25px 35px 0 -5px #55b95f,
+        20px 50px 0 -8px #3e9548;
+}
+
+
+/* مریخ */
+
+.mars {
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #ff9b67,
+            #c94824 60%,
+            #68200d
+        );
+
+    box-shadow:
+        inset -15px -18px 25px #521a0b,
+        0 0 35px #e94f2950;
+}
+
+
+/* مشتری */
+
+.jupiter {
+    background:
+        linear-gradient(
+            #d7ad75 0%,
+            #77492f 12%,
+            #e8c699 22%,
+            #9c6543 35%,
+            #f0d3a8 48%,
+            #8b4f30 60%,
+            #d7ac77 75%,
+            #633921 85%,
+            #e6c28e 100%
+        );
+
+    box-shadow:
+        inset -18px -15px 30px #422617,
+        0 0 35px #c7925250;
+}
+
+
+/* زحل */
+
+.saturn {
+    background:
+        linear-gradient(
+            #f2d69b,
+            #ba9055,
+            #eed396,
+            #8e673e,
+            #e7cb91
+        );
+
+    box-shadow:
+        inset -15px -15px 30px #76502d,
+        0 0 35px #f1d28c45;
+
+    z-index: 2;
+}
+
+.ring {
+    width: 180px;
+    height: 45px;
+
+    border: 10px solid #d6c29a;
+
+    border-radius: 50%;
+
+    position: absolute;
+
+    top: 38px;
+    left: -30px;
+
+    transform: rotate(-15deg);
+
+    z-index: -1;
+
+    opacity: 0.8;
+}
+
+
+/* اورانوس */
+
+.uranus {
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #b8ffff,
+            #5ec6d2 60%,
+            #21717d
+        );
+
+    box-shadow:
+        inset -15px -15px 30px #1d6972,
+        0 0 40px #7efaff50;
+}
+
+
+/* نپتون */
+
+.neptune {
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #6aa7ff,
+            #244fc5 60%,
+            #101c78
+        );
+
+    box-shadow:
+        inset -15px -15px 30px #08145c,
+        0 0 40px #336dff60;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding: 100px 5%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 100px;
+}
+
+.sun {
+    min-width: 350px;
+    height: 350px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fff8a8,
+            #ffbb27 30%,
+            #ff7518 65%,
+            #d93c00
+        );
+
+    box-shadow:
+        0 0 40px #ff9b23,
+        0 0 100px #ff6e1850,
+        0 0 180px #ff652f30;
+
+    animation: sun 4s infinite alternate;
+}
+
+@keyframes sun {
+
+    from {
+        box-shadow:
+            0 0 40px #ff9b23,
+            0 0 100px #ff6e1850;
+    }
+
+    to {
+        box-shadow:
+            0 0 70px #ffc043,
+            0 0 150px #ff6e1870;
+    }
+
+}
+
+.about-text h2 {
+    font-size: 42px;
+
+    margin-bottom: 20px;
+}
+
+.about-text > p {
+    color: #aeb4ca;
+}
+
+.about-text .small-title {
+    color: #68dfff;
+}
+
+
+/* ================= NUMBERS ================= */
+
+.numbers {
+    display: flex;
+
+    gap: 30px;
+
+    margin-top: 40px;
+}
+
+.numbers div {
+    background: #10162d;
+
+    padding: 15px 25px;
+
+    border-radius: 15px;
+
+    text-align: center;
+}
+
+.numbers strong {
+    display: block;
+
+    font-size: 30px;
+
+    color: #6adfff;
+}
+
+.numbers span {
+    color: #aaaec1;
+
+    font-size: 13px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+
+    padding: 50px 20px;
+
+    background: #030510;
+
+    border-top: 1px solid #ffffff15;
+}
+
+footer h3 {
+    color: #70dfff;
+
+    font-size: 24px;
+}
+
+footer p {
+    color: #979caf;
+
+    margin-top: 10px;
+}
+
+footer .copy {
+    font-size: 12px;
+
+    margin-top: 30px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+    .planets {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .about {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    nav ul {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .planets {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title h2 {
+        font-size: 32px;
+    }
+
+    .sun {
+        min-width: 230px;
+        width: 230px;
+        height: 230px;
+    }
+
+    .numbers {
+        flex-direction: column;
+    }
+
+}
